@@ -1,7 +1,10 @@
 <% if @customers.empty? %>
   <p>there are no customers in this database.</p>
 <% else %>
-  <% @customers.each do |customer|%>
-    <h2><%= customer.full_name%></h2>
-  <%end%>
+  <h1>All Customers in alphabetical order</h1>
+  <div class="flex">
+    <%= render @customers %>
+  </div>
+  <p><%=link_to 'missing emails', customers_missing_email_path %></p>
+  <p><%=link_to 'back', root_path %></p>
 <% end %>
