@@ -1,0 +1,7 @@
+<% if @customers.empty? %>
+  <p>there are no customers in this database.</p>
+<% else %>
+  <% @customers.each do |customer|%>
+    <h2><%= customer.full_name%></h2>
+  <%end%>
+<% end %>
